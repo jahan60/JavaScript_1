@@ -53,8 +53,9 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
    console.log(`Is the first number is greater than the last? ${firstGreaterThanLast}`);
 
    //Accomplish the following arithmetic chain:
-   
-//Subtract the first number from the second number.
-//Multiply the result by the third number.
-//Find the remainder of dividing the result by the fourth number.
+   //Subtract the first number from the second number.
+   //Multiply the result by the third number.
+   //Find the remainder of dividing the result by the fourth number.
+   const arithmeticChain = ((n2-n1)*n3)%n4;
+   console.log(`Result of arithmetic chain: ${arithmeticChain}`);
 //Change the way that isOver25 calculates so that we do not need to use the NOT operator (!) in other logic comparisons. Rename the variable as appropriate.*/
