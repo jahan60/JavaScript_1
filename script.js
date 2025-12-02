@@ -18,7 +18,7 @@ const isTwoOdd = (n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2;
 // Check three: no number larger than 25
 // This time, we use the OR operator to check
 // if ANY of the numbers is larger than 25.
-const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
+//const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
 
 // Check four: all unique numbers
 // This is long, and there are more efficient
@@ -30,10 +30,10 @@ const isUnique = n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 
 // for convenience. Note how we negate isOver25 using
 // the ! operator. We could also have tested for 
 // "isUnder25" as an alternative.
-const isValid = isSum50 && isTwoOdd && !isOver25 && isUnique;
+//const isValid = isSum50 && isTwoOdd && !isOver25 && isUnique;
 
 // Finally, log the results.
-console.log(isValid);
+//console.log(isValid);
 
 // Here's another example of how this COULD be done,
 // but it SHOULD NOT be done this way. As programmers,
@@ -58,4 +58,9 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
    //Find the remainder of dividing the result by the fourth number.
    const arithmeticChain = ((n2-n1)*n3)%n4;
    console.log(`Result of arithmetic chain: ${arithmeticChain}`);
-//Change the way that isOver25 calculates so that we do not need to use the NOT operator (!) in other logic comparisons. Rename the variable as appropriate.*/
+//Change the way that isOver25 calculates so that we do not need to use the NOT operator (!) in other logic comparisons. Rename the variable as appropriate.
+const isOver25 = !(n1 <= 25 && n2 <= 25 && n3 <= 25 && n4 <= 25);
+  // True if ANY number is greater than 25
+const anyNumberOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
+
+console.log(`Any number is over 25: ${anyNumberOver25}`);
